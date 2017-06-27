@@ -1,0 +1,209 @@
+.btn {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  background-color: #489CFF;
+  color: #fff;
+  text-align: center;
+}
+.ft30 {
+  font-size: 30px;
+}
+.ft20 {
+  font-size: 20px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.index_chose {
+  margin: 22px 20px;
+}
+.index_chose ul li {
+  float: left;
+  width: 50%;
+  overflow: hidden;
+  height: 78px;
+}
+.index_chose ul li i {
+  float: left;
+  width: 68px;
+  height: 48px;
+  background: url(../images/sprite-choose.png) 0px 0px no-repeat;
+}
+.index_chose ul li .index_chose_fr {
+  float: left;
+  width: 51%;
+  min-width: 68px;
+}
+.index_chose ul li .index_chose_fr .title {
+  margin-top: 4px;
+  font-size: 15px;
+  color: #023156;
+}
+.index_chose ul li .index_chose_fr p {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #B7BABD;
+}
+.index_chose ul li:first-child {
+  border-bottom: solid 1px #F7F7F7;
+  border-right: solid 1px #F7F7F7;
+}
+.index_chose ul li:first-child i {
+  background-position: 0px -135px;
+}
+.index_chose ul li:nth-child(2) {
+  border-bottom: solid 1px #F7F7F7;
+}
+.index_chose ul li:nth-child(2) i {
+  background-position: 10px -90px;
+}
+.index_chose ul li:nth-child(3) {
+  padding-top: 10px;
+}
+.index_chose ul li:nth-child(3) i {
+  background-position: 0px 3px;
+}
+.index_chose ul li:last-child {
+  padding-top: 10px;
+  border-left: solid 1px #F7F7F7;
+}
+.index_chose ul li:last-child i {
+  background-position: 10px -44px;
+}
+.index-list {
+  background-color: #FAFAFA;
+  margin: 0;
+}
+.index-list .list-type {
+  padding: 0px 20px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  color: #023156;
+  border-top: solid 1px #F4F4F4;
+  border-bottom: solid 1px #F4F4F4;
+}
+.index-list .list-kind {
+  background-color: #fff;
+}
+.index-list .list-kind .list-title {
+  height: 48px;
+  line-height: 48px;
+  padding: 0px 20px;
+  font-size: 16px;
+  color: #023156;
+  border-bottom: solid 1px #F4F4F4;
+  position: relative;
+  z-index: 2;
+}
+.index-list .list-kind .list-title i {
+  display: inline-block;
+  width: 22px;
+  text-align: center;
+  height: 23px;
+  line-height: 23px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #fff;
+  margin-right: 10px;
+}
+.index-list .list-kind .list-title i.icon-x {
+  background-color: #21D3AC;
+}
+.index-list .list-kind .list-title span {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  right: 0;
+  top: 0;
+  width: 36px;
+  height: 36px;
+}
+.index-list .list-kind .list-title span.icon-j {
+  background: url(../images/icon-j.png) 0px 0px no-repeat;
+}
+.index-list .list-kind .list-c {
+  padding: 0px 20px;
+}
+.index-list .list-kind .list-c .list-c-t {
+  padding-top: 20px;
+  font-size: 16px;
+}
+.index-list .list-kind .list-c .list-c-t .list-c-t-l {
+  float: left;
+}
+.index-list .list-kind .list-c .list-c-t .list-c-t-l,
+.index-list .list-kind .list-c .list-c-t .list-c-t-l span {
+  color: #ff8038;
+}
+.index-list .list-kind .list-c .list-c-t .list-c-t-r {
+  float: right;
+  height: 23px;
+  line-height: 23px;
+  color: #023156;
+}
+.index-list .list-kind .list-c .list-c-t .list-c-t-r span {
+  color: #ff8038;
+}
+.index-list .list-kind .list-c .list-c-m {
+  margin-top: 25px;
+}
+.index-list .list-kind .list-c .list-c-m span {
+  font-size: 13px;
+  color: #B7BABD;
+}
+.index-list .list-kind .list-c .list-c-m span:first-child {
+  margin-right: 44px;
+  color: #023156;
+}
+.index-list .list-kind .list-c .list-c-b {
+  padding-bottom: 18px;
+}
+.index-list .list-kind .list-c .list-c-b .list-c-b-l {
+  padding-top: 15px;
+  width: 58%;
+  float: left;
+}
+.index-list .list-kind .list-c .list-c-b .list-c-b-l .jds {
+  margin-right: 10px;
+  margin-bottom: 2px;
+  width: 50%;
+  display: inline-block;
+  height: 5px;
+  background-color: #E2E8EF;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  text-align: left;
+}
+.index-list .list-kind .list-c .list-c-b .list-c-b-l .jds .jd {
+  background-color: #489CFF;
+  height: 5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+.index-list .list-kind .list-c .list-c-b .list-c-b-l span {
+  font-size: 13px;
+  color: #023156;
+}
+.index-list .list-kind .list-c .list-c-b .list-c-b-r {
+  display: inline-block;
+  margin-top: 6px;
+  width: 90px;
+  height: 32px;
+  line-height: 32px;
+  float: right;
+}
+/*# sourceMappingURL=index.css.map */

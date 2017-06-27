@@ -1,0 +1,40 @@
+/*签到*/
+.signRule-title {
+  font-size: 14px;
+  color: #002B4D;
+  border-bottom: solid 1px #F5F5F5;
+  padding: 30px 20px 15px;
+}
+.signRule {
+  font-size: 13px;
+}
+.signRule .title {
+  padding: 15px 0px;
+  color: #FF7426;
+}
+.signRule .cont,
+.signRule .cont p {
+  color: #AEB1B5;
+  line-height: 23px;
+}
+.signRule-vip {
+  margin: 20px;
+}
+.signRule-vip table th,
+.signRule-vip table td {
+  font-size: 13px;
+  border: solid 1px #E7E8EA;
+  height: 34px;
+  font-weight: normal;
+  text-align: center;
+}
+.signRule-vip table th {
+  color: #002B4D;
+}
+.signRule-vip table td {
+  color: #489fff;
+}
+.signRule-vip table td span {
+  color: #FF7426;
+}
+/*# sourceMappingURL=sign.css.map */

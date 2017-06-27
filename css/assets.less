@@ -1,0 +1,275 @@
+@import "publicLESS.less";
+/*资产详情*/
+.myAsset{
+    margin: 0;
+    .myAsset-top{
+        width: 100%;
+        height: 226px;
+        background: url(../images/asset-bg.png) center top no-repeat;
+        background-size: 100% 100%;
+        .myAsset-tab{
+            padding-top: 28px;
+            li{
+                .ft(15px);
+                .fl;
+                &:first-child{
+                    border-left: none;
+                }
+                &.on{
+                    color: @white;
+                }
+                color: #AAD1FF;
+                border-left: solid 1px #AAD1FF;
+                width: 33%;
+                text-align: center;
+            }
+        }
+        .myAsset-rateMoneyTab{
+            margin-top: 30px;
+            position: relative;
+            z-index: 3;
+            a{
+                display: block;
+                position: absolute;
+                top: 7px;
+                z-index: 4;
+                width: 10px;
+                height: 18px;
+                background: url(../images/sprite-asset.png) 0px 0px no-repeat;
+                &.myAsset-prev{
+                    background-position: -101px 0px;
+                    left: 20px;
+                }
+                &.myAsset-next{
+                    background-position: -120px 0px;
+                    right: 20px;
+                }
+            }
+            .myAsset-rateMoney{
+                .ft(14px);
+                .line-height(33px);
+                display: none;
+                text-align: center;
+                color: @white;
+                span{
+                    .ft(30px);
+                    color: @white;
+                }
+            }
+        }
+        .myAsset-allMoney{
+            margin-top: 38px;
+            &>div{
+                width: 50%;
+                label{
+                    color: #AAD1FF;
+                    .ft(13px);
+                }
+                div{
+                    .ft(18px);
+                    color: @white;
+                    margin-top: 5px;
+                }
+            }
+            .myAsset-allMoney-fl{
+                .fl;
+                border-right: solid 1px #AAD1FF;
+                text-indent: 25px;
+            }
+            .myAsset-allMoney-fr{
+                .fr;
+                text-align: right;
+//              padding-right: 50px;
+                text-align: center;
+            }
+        }
+    }
+    .myAsset-operation{
+        background-color: @white;
+        padding: 11px 0px;
+        border-bottom: solid 1px #eee;
+        a{
+            .fl;
+            width: 50%;
+            .ft(13px);
+            .line-height(25px);
+            text-align: center;
+            color: @black;
+            i{
+                display: inline-block;
+                margin-right: 10px;
+                position: relative;
+                background: url(../images/sprite-asset.png) 0px 0px no-repeat;
+            }
+            &.myAsset-rech{
+                i{
+                    top: 4px;
+                    width: 27px;
+                    height: 18px;
+                    background-position: -21px -1px;
+                }
+                border-right:solid 1px #F7F7F7;
+            }
+            &.myAsset-cash{
+                i{
+                    top: 3px;
+                    width: 24px;
+                    height: 21px;
+                    background-position: -63px 0px;
+                    margin-bottom: -2px;
+                }
+            }
+        }
+    }
+    .myAsset-hold{
+        .ft(14px);
+        color: @black;
+        .line-height(44px);
+        padding:0px 20px;
+        margin-top: 12px;
+        background-color: @white;
+        border-bottom: solid 1px #eee;
+        border-top: solid 1px #eee;
+        a{
+            .fr;
+            .ft(14px);
+            color: @blue;
+            i{
+                .fr;
+                height: 13px;
+                padding-left: 17px;
+                margin-top: 16px;
+                background: url(../images/sprite-asset.png) 9px -4px no-repeat;
+            }
+        }
+    }
+    .myAsset-dataList{
+        margin-top: 12px;
+        background-color: @white;
+        border-top: solid 1px #eee;
+        border-bottom: solid 1px #eee;
+        position: relative;
+        z-index: 3;
+        .icon-state{
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 43px;
+            height: 43px;
+        }
+        .state-hkz{
+            background: url(../images/myAsset-hkz.png) center no-repeat;
+        }
+        .title{
+            padding: 0px 20px;
+            color: @black;
+            .ft(16px);
+            .line-height(48px);
+            border-bottom: solid 1px #eee;
+            span{
+                color: @yellow;
+                margin-left: 12px;
+            }
+        }
+        .cont{
+            padding: 6px 20px 16px;
+            li{
+                margin-top: 12px;
+                color: @gay;
+                .ft(16px);
+                .fl;
+                width: 33.3333%;
+                span{
+                    color: @black;
+                    i{
+                        .ft(13px);
+                        color: @black;
+                    }
+                    &.yellow{
+                        color: @yellow;
+                    }
+                }
+            }
+            .cont-time{
+                margin-top: 20px;
+                color: @gay;
+                .ft(13px);
+                .line-height(32px);
+                span{
+                    color: @gay;
+                }
+                a{
+                    float: right;
+                    background-color: @blue;
+                    color: @white;
+                    text-align: center;
+                    .border-radius(4px);
+                    width: 90px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
+
+/*资产-账户余额*/
+.myAssetAccount{
+    margin: 0;
+    .myAssetAccount-top{
+        padding: 0px 20px;
+        height: 85px;
+        background-color: @blue;
+        li{
+            .ft(13px);
+            .fl;
+            width: 40%;
+            margin-top: 12px;
+            color: #AAD1FF;
+            span{
+                .ft(16px);
+                color: @white;
+            }
+        }
+    }
+    .myAssetAccount-title{
+        padding: 0px 20px;
+        .line-height(38px);
+    }
+    .myAssetAccount-tab{
+        background-color: @white;
+        border-top: solid 1px #eee;
+        border-bottom: solid 1px #eee;
+        li{
+            .fl;
+            width: 33.33333%;
+            text-align: center;
+            a{
+                color: @gay;
+                display: inline-block;
+                .line-height(45px);
+                padding: 0px 20px;
+            }
+            &.on{
+                a{
+                    color: @blue;
+                    border-bottom: solid 1px @blue;
+                }
+            }
+        }
+    }
+    .myAssetAccount-tab-t{
+        li{
+            .line-height(38px);
+            .ft(13px);
+            color: @gay;
+            float: left;
+            width: 33.3333%;
+            text-align: center;
+            border-bottom: solid 1px #eee;
+        }
+    }
+    .myAssetAccount-list{
+        display: none;
+    }
+}
