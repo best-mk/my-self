@@ -1,0 +1,356 @@
+
+// Created by libo on 2016/10/23.
+// 精简版图标
+// 使用的 Font Awesome 4.5.0 http://fontawesome.io License - http://fontawesome.io/license
+// 在线字体转换https://everythingfonts.com/
+
+@font-face {
+	font-family: 'anyi-font';
+	src: url('/static/fonts/anyi-webfont.eot');
+	src: url('/static/fonts/anyi-webfont.eot?#iefix') format('embedded-opentype'), url('/static/fonts/anyi-webfont.woff2') format('woff2'), url('/static/fonts/anyi-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+.fa {
+	display: inline-block;
+	font: normal normal normal 14px/1 anyi-font;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/* makes the font 33% larger relative to the icon container */
+.fa-lg {
+	font-size: 1.33333333em;
+	line-height: 0.75em;
+	vertical-align: -15%;
+}
+.fa-2x {
+	font-size: 2em;
+}
+.fa-3x {
+	font-size: 3em;
+}
+.fa-4x {
+	font-size: 4em;
+}
+.fa-5x {
+	font-size: 5em;
+}
+.fa-fw {
+	width: 1.28571429em;
+	text-align: center;
+}
+.fa-ul {
+	padding-left: 0;
+	margin-left: 2.14285714em;
+	list-style-type: none;
+}
+.fa-ul > li {
+	position: relative;
+}
+.fa-li {
+	position: absolute;
+	left: -2.14285714em;
+	width: 2.14285714em;
+	top: 0.14285714em;
+	text-align: center;
+}
+.fa-li.fa-lg {
+	left: -1.85714286em;
+}
+.fa-border {
+	padding: .2em .25em .15em;
+	border: solid 0.08em #eeeeee;
+	border-radius: .1em;
+}
+.fa-pull-left {
+	float: left;
+}
+.fa-pull-right {
+	float: right;
+}
+.fa.fa-pull-left {
+	margin-right: .3em;
+}
+.fa.fa-pull-right {
+	margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
+.pull-right {
+	float: right;
+}
+.pull-left {
+	float: left;
+}
+.fa.pull-left {
+	margin-right: .3em;
+}
+.fa.pull-right {
+	margin-left: .3em;
+}
+.fa-spin {
+	-webkit-animation: fa-spin 2s infinite linear;
+	animation: fa-spin 2s infinite linear;
+}
+.fa-pulse {
+	-webkit-animation: fa-spin 1s infinite steps(8);
+	animation: fa-spin 1s infinite steps(8);
+}
+@-webkit-keyframes fa-spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+@keyframes fa-spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+.fa-rotate-90 {
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.fa-rotate-180 {
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.fa-rotate-270 {
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+.fa-flip-horizontal {
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+	-webkit-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+.fa-flip-vertical {
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+	-webkit-transform: scale(1, -1);
+	-ms-transform: scale(1, -1);
+	transform: scale(1, -1);
+}
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+	filter: none;
+}
+.fa-stack {
+	position: relative;
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	vertical-align: middle;
+}
+.fa-stack-1x,
+.fa-stack-2x {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+.fa-stack-1x {
+	line-height: inherit;
+}
+.fa-stack-2x {
+	font-size: 2em;
+}
+.fa-inverse {
+	color: #ffffff;
+}
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.fa-search:before {
+	content: "\f002";
+}
+
+.fa-check:before {
+	content: "\f00c";
+}
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+	content: "\f00d";
+}
+.fa-search-plus:before {
+	content: "\f00e";
+}
+
+.fa-refresh:before {
+	content: "\f021";
+}
+.fa-chevron-up:before {
+	content: "\f077";
+}
+.fa-chevron-down:before {
+	content: "\f078";
+}
+.fa-chevron-left:before {
+	content: "\f053";
+}
+
+.fa-chevron-right:before {
+	content: "\f054";
+}
+
+.fa-arrow-left:before {
+	content: "\f060";
+}
+.fa-arrow-right:before {
+	content: "\f061";
+}
+.fa-arrow-up:before {
+	content: "\f062";
+}
+.fa-arrow-down:before {
+	content: "\f063";
+}
+
+.fa-chevron-down:before {
+	content: "\f078";
+}
+.fa-retweet:before {
+	content: "\f079";
+}
+
+.fa-arrow-circle-left:before {
+	content: "\f0a8";
+}
+.fa-arrow-circle-right:before {
+	content: "\f0a9";
+}
+.fa-arrow-circle-up:before {
+	content: "\f0aa";
+}
+.fa-arrow-circle-down:before {
+	content: "\f0ab";
+}
+.fa-spinner:before {
+	content: "\f110";
+}
+.fa-plus:before {
+	content: "\f067";
+}
+.fa-minus:before {
+	content: "\f068";
+}
+
+.fa-plus-circle:before {
+	content: "\f055";
+}
+.fa-minus-circle:before {
+	content: "\f056";
+}
+.fa-times-circle:before {
+	content: "\f057";
+}
+.fa-check-circle:before {
+	content: "\f058";
+}
+.fa-question-circle:before {
+	content: "\f059";
+}
+.fa-info-circle:before {
+	content: "\f05a";
+}
+.fa-crosshairs:before {
+	content: "\f05b";
+}
+.fa-times-circle-o:before {
+	content: "\f05c";
+}
+.fa-check-circle-o:before {
+	content: "\f05d";
+}
+.fa-ban:before {
+	content: "\f05e";
+}
+.fa-th-large:before {
+	content: "\f009";
+}
+.fa-th:before {
+	content: "\f00a";
+}
+.fa-th-list:before {
+	content: "\f00b";
+}
+.fa-heart:before {
+	content: "\f004";
+}
+.fa-star:before {
+	content: "\f005";
+}
+.fa-star-o:before {
+	content: "\f006";
+}
+.fa-user:before {
+	content: "\f007";
+}
+.fa-chevron-circle-left:before {
+	content: "\f137";
+}
+.fa-chevron-circle-right:before {
+	content: "\f138";
+}
+.fa-chevron-circle-up:before {
+	content: "\f139";
+}
+.fa-chevron-circle-down:before {
+	content: "\f13a";
+}
+.fa-clock-o:before {
+	content: "\f017";
+}
+.fa-plus-square:before {
+	content: "\f0fe";
+}
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+	content: "\f0c9";
+}
+.fa-angle-double-left:before {
+	content: "\f100";
+}
+.fa-angle-double-right:before {
+	content: "\f101";
+}
+.fa-angle-double-up:before {
+	content: "\f102";
+}
+.fa-angle-double-down:before {
+	content: "\f103";
+}
+.fa-angle-left:before {
+	content: "\f104";
+}
+.fa-angle-right:before {
+	content: "\f105";
+}
+.fa-angle-up:before {
+	content: "\f106";
+}
+.fa-angle-down:before {
+	content: "\f107";
+}
+

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>安第斯山脉</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="applicable-device" content="mobile">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <link rel="stylesheet" type="text/css" href="css/base_wap.css" />
+    <link rel="stylesheet" type="text/css" href="css/family.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link href="css/swiper-3.4.2.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="popmask"></div>
+    <div class="ajax-loading"></div>
+
+
+    <section class="icbc-travel">
+        <audio controls="controls" id="audio" autoplay="autoplay" loop="loop">
+        <source src="images/dreamer.mp3" type="audio/mp3" />
+        <source src="images/dreamer.ogg" type="audio/ogg" />
+    </audio>
+        <div class="banner-img banner-top">
+            <img src="images/1.jpg" />
+            <span>我们是国内性价比最高的红酒供应商<br/><a>我们只做真酒＜无理由退货，假一赔百</a></span>
+        </div>
+
+        <div class="demo-wrap">
+            <h2></h2>
+            <div class="swiper-container banner-wrap" id="banner_box2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/banner2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/case2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/banner3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <div class="demo-wrap">
+            <h2>Technology</h2>
+            <video controls="controls">
+            <source src="images/technology.mp4"  type="video/mp4" />
+            <source src="images/technology.ogg"  type="video/ogg" />
+            <source src="images/technology.webm"  type="video/webm" />
+        </video>
+        </div>
+        <!--<div class="form-wrap">-->
+        <!--<form  data-type="0">-->
+        <!--<div class="coment-box"><div class="apply-input"><input type="text" name="realname" class="realname" id="realname" placeholder="请输入您的姓名" /></div></div>-->
+        <!--<div class="coment-box"><div class="apply-input"><input type="tel" name="mobile" class="mobile" id="mobile" placeholder="请输入手机号码" maxlength="11" /></div></div>-->
+        <!--<a class="submit-btn draw-insurance-btn" href="javascript:;" onclick='MtaH5.clickStat("3");'>-->
+        <!--立即领取-->
+        <!--</a>-->
+        <!--<p class="description" style="margin-top:0;color: #c294bf;">活动时间：2017年11月29日-12月10日</p>-->
+        <!--</form>-->
+        <!--</div>-->
+        <!--project star-->
+        <div class="demo-wrap">
+            <h2>Material</h2>
+            <div class="banner2">
+                <div class="swiper-container" id="banner_box">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/pt1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/pt2.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/pt3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+        <div class="demo-wrap">
+            <h2>Lorem Ipsum Dolor</h2>
+            <div class="main-img">
+                <img src="images/detail1.jpg" alt="">
+                <img src="images/detail2.jpg" alt="">
+            </div>
+            <!--<a data-toggle="page" data-target="#page-modal-doc" class="doc">《相关证书》</a>-->
+        </div>
+        <div class="demo-wrap" style="padding-bottom: .1rem">
+            <img src="images/dip1.jpg" alt="">
+            <img src="images/dip2.jpg" alt="">
+            <img src="images/dip3.jpg" alt="">
+        </div>
+        <img src="images/banner1.jpg" alt="" style="display: block">
+
+        <div class="banner-img" style="background: #393043;text-align: center;color: #c294bf;font-size: .12rem;padding: 0 0 .1rem 0 ">
+            <p class="description">精正红酒<br/>地址：厦门市海沧区融信海上城5号，电话 <a style="color: #c294bf;text-decoration: underline" href="tel:05925030999">05925030999</a>
+        </div>
+    </section>
+
+    <div class="page-modal" id="page-modal-doc">
+        <div class="p-modal-content">
+            <img src="images/dip1.jpg" alt="">
+        </div>
+    </div>
+
+
+</body>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/anyi.plugin.js"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script>
+    $(function() {
+        //        $("#page-modal-doc").modal("show");
+        var audio = document.getElementById('audio');
+        $('html').one('touchstart', function() {
+            audio.play();
+        });
+        new Swiper('#banner_box', {
+            autoplay: 3000,
+            loop: true,
+            grabCursor: true,
+            prevButton: ".banner2 .swiper-button-prev",
+            nextButton: ".banner2 .swiper-button-next"
+        });
+
+        new Swiper('#banner_box2', {
+            autoplay: 3000,
+            loop: true,
+            pagination: '.swiper-pagination'
+        });
+    });
+</script>
+
+</html>

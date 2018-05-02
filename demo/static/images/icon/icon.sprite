@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SpriteFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CssFileName="../images/icon" ImageName="icon" IsPhone="false" PhoneFigure="2" PhoneUnit="rem" SpriteImgFileType="Png" xmlns="CssSprite">
+  <SpriteList>
+    <Sprite Path="icon_sports.png" LocationX="0" LocationY="0" />
+    <Sprite Path="icon_logistics.png" LocationX="0" LocationY="45" />
+    <Sprite Path="icon_sign.png" LocationX="0" LocationY="91" />
+    <Sprite Path="icon_shop.png" LocationX="0" LocationY="137" />
+    <Sprite Path="icon_umbrella.png" LocationX="0" LocationY="183" />
+    <Sprite Path="icon_electric.png" LocationX="0" LocationY="229" />
+    <Sprite Path="icon_special.png" LocationX="0" LocationY="275" />
+    <Sprite Path="icon_special_active.png" LocationX="0" LocationY="349" />
+    <Sprite Path="icon_api_active.png" LocationX="0" LocationY="423" />
+    <Sprite Path="icon_api.png" LocationX="0" LocationY="497" />
+    <Sprite Path="icon_online_active.png" LocationX="0" LocationY="571" />
+    <Sprite Path="icon_online.png" LocationX="0" LocationY="645" />
+    <Sprite Path="date.png" LocationX="0" LocationY="719" />
+  </SpriteList>
+</SpriteFile>

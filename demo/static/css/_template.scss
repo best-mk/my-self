@@ -1,0 +1,32 @@
+
+// 为提升开发效率，页面全部使用initial-scale=1
+// 所有字体大小使用px作为单位。
+// 牺牲页面的美观，提升页面开发速度
+
+//设计稿宽度
+$em-base:75;
+//https://github.com/thoughtbot/bourbon
+@import "mixin/bourbon";
+//用的bootstrap的normalize
+@import "normalize";
+//主要用于字体转换
+@import "customize";
+//配色
+@import "t-theme";
+//颜色
+@import "t-color";
+//字体图标
+@import "template-icon";
+//公共样式
+@import "template-common";
+//模态窗口
+@import "template-modal";
+//表单
+@import "template-btn";
+//表单
+@import "template-form";
+//插件相关样式
+@import "template-plugin";
+
+//产品
+//@import "template-product";

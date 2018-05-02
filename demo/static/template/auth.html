@@ -1,0 +1,97 @@
+<div id="modal-auth" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="reg-box">
+                    <div class="tab tab-active">
+                        <ul class="tab-tit">
+                            <li class="active"><a data-target="#form-active1">账号登录</a></li>
+                            <li><a data-target="#form-active2">快捷登录</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <form autocapitalize="off" id="form-active1" class="form form-style1">
+                                <div class="form-group has-feedback">
+                                    <div class="input-group">
+                                        <label>手机号/用户名</label>
+                                        <input type="text" data-field="companyemail" class="form-control" required="required" data-placeholder="手机号码/用户名" placeholder="请输入您手机号码/用户名" id="form-email">
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="input-group">
+                                        <label>密码</label>
+                                        <input type="password" required="required" data-field="phone" class="form-control" data-placeholder="密码" placeholder="请输入密码" id="form-phone">
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="input-group">
+                                        <label>图形验证码</label>
+                                        <input type="text" required="required" data-field="verifyCode" class="form-control input-code" placeholder="请输入图形验证码" >
+                                        <label class="input-group-code" id="img-code"></label>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="input-group">
+                                        <label>手机验证码</label>
+                                        <input type="text" class="form-control" required="required" data-field="code" data-placeholder="验证码" placeholder="请输入您的手机验证码" id="yanzheng"/>
+                                        <a class="input-group-btn" data-action="code" data-text="获取验证码">
+                                            获取验证码
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="btn-box">
+                                    <a class="btn btn-blue btn-long" data-action="submit" data-type="1">确定</a>
+                                </div>
+                                <div class="reg-tips">
+                                    如您不确定企业是否开通，<br /> 可向企业HR部门咨询<br />或致电逸职保客服（400-867-2828）
+                                </div>
+                            </form>
+                            <form autocapitalize="off" id="form-active2" class="form form-style1 hide">
+                                <div class="form-group has-feedback">
+                                    <div class="input-group">
+                                        <label>企业名称</label>
+                                        <input type="text"  data-field="companyname" class="form-control" required="required" data-placeholder="企业名称" placeholder="请输入您所在的企业名称" id="form-commany-name">
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="input-group">
+                                        <label>手机号码</label>
+                                        <input type="text" pattern="^1(3[0-9]|4[57]|5[0-35-9]|8[0-9]|7[0-9])\d{8}$" data-error="手机号码格式不正确" required="required" data-field="phone" class="form-control" data-placeholder="手机号码" placeholder="请输入您的手机号码" >
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="input-group">
+                                        <label>图形验证码</label>
+                                        <input type="text" required="required" data-field="verifyCode" class="form-control input-code" placeholder="请输入图形验证码" >
+                                        <label class="input-group-code" id="img-code2"></label>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="input-group">
+                                        <label>验证码</label>
+                                        <input type="text" class="form-control" required="required" data-field="code" data-placeholder="验证码" placeholder="请输入您的手机验证码" />
+                                        <a class="input-group-btn" data-action="code" data-text="获取验证码">
+                                            获取验证码
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="btn-box">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <a class="btn btn-blue btn-long" data-action="submit" data-type="2">确定</a>
+                                        </div>
+                                        <div class="col-5">
+                                            <a class="btn btn-grey btn-long" data-action="cancel">返回</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reg-tips">
+                                    了解更多可致电逸职保客服（<a href="tel:4008672828"> 400-867-2828</a>）
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

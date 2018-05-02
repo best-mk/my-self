@@ -1,0 +1,296 @@
+
+
+// Created by libo on 2016/10/25.
+// 通用模板-模态窗
+// 用的Bootstrap的Modal稍作修改，基本一致，具体用法查询Bootstrap的Modal组件
+
+
+.modal-open {
+	overflow: hidden;
+}
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+	display: none;
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	@include font-dpr(14px);
+
+	&.animated {
+		-webkit-animation-duration: .3s;
+		animation-duration: .3s;
+	}
+
+}
+.modal.fade .modal-dialog {
+	-webkit-transition: -webkit-transform .3s ease-out;
+	-o-transition:      -o-transform .3s ease-out;
+	transition:         transform .3s ease-out;
+	-webkit-transform: translate(0, -25%);
+	-ms-transform: translate(0, -25%);
+	-o-transform: translate(0, -25%);
+	transform: translate(0, -25%);
+}
+.modal.in .modal-dialog {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal-dialog {
+	position: relative;
+	max-height: 85%;
+	width: 90%;
+	left: 5%;
+	-webkit-transition: height 1000ms linear;
+	transition: height 1000ms linear;
+	top:rem(60);
+}
+.modal-content {
+	position: relative;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, .2);
+	border-radius: rem(12);
+	outline: 0;
+	-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+	box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: #000;
+}
+.modal-backdrop.fade {
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+.modal-backdrop.in {
+	filter: alpha(opacity=50);
+	opacity: .5;
+}
+.modal-header {
+	padding: rem(30);
+	border-bottom: 1px solid #e5e5e5;
+	position: relative;
+	text-align: center;
+	color: #078ba0;
+	border-radius: rem(12) rem(12) 0 0;
+	@include font-dpr(14px);
+	//font-size: 14px;
+}
+.modal-header .close {
+	border-radius: 100%;
+	width: rem(60);
+	height: rem(60);
+	line-height: rem(60);
+	display: block;
+	background: #fff;
+	@include font-dpr(18px);
+	//font-size: 16px;
+	text-align: center;
+	color: #737373;
+	cursor: pointer;
+	position: absolute;
+	top: rem(-20);
+	right: rem(-20);
+	text-decoration: none;
+	border:1px solid $grey;
+}
+.modal-title {
+	margin: 0;
+	line-height: 1.42857143;
+}
+.modal-body {
+	position: relative;
+	padding: rem(40);
+	overflow: hidden;
+	overflow-y: auto;
+}
+.modal-footer {
+	padding: rem(15);
+	text-align: right;
+	border-top: 1px solid #e5e5e5;
+}
+.modal-footer .btn + .btn {
+	margin-bottom: 0;
+	margin-left: 5px;
+}
+.modal-footer .btn-group .btn + .btn {
+	margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+	margin-left: 0;
+}
+.modal-scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
+}
+@media (min-width: 768px) {
+	.modal-dialog {
+		width: rem(600);
+		margin: 0 auto;
+		left: 0;
+	}
+	.modal-content {
+		-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+	}
+	/*.modal-sm {
+		width: rem(300);
+	}*/
+}
+@media (min-width: 992px) {
+	.modal-lg {
+		width: rem(900);
+	}
+}
+
+.modal-footer {
+	> a.modal-close{
+		display: block;
+		text-align: center;
+		//@include font-dpr(14px);
+		//font-size: 14px;
+		color: #ff832e;
+		padding: rem(15) 0;
+	}
+
+	> a.modal-cancel {
+		display: block;
+		text-align: center;
+		//@include font-dpr(14px);
+		//font-size: 14px;
+		color: #808080;
+		padding: rem(15) 0;
+		width: 50%;
+		float: left;
+		//background-color: #f7f7f7;
+		border-right: 1px solid #e7e7e7;
+	}
+
+	> a.modal-ok{
+		display: block;
+		text-align: center;
+		//font-size: 14px;
+		color: #ff832e;
+		padding: rem(15) 0;
+		width: 50%;
+		float: left;
+	}
+
+	@include clearfix();
+}
+
+.modal-alert {
+	.modal-body {
+		text-align: center;
+		//@include font-dpr(14px);
+		//font-size: 14px;
+		line-height: 1.5;
+	}
+}
+
+.modal-iframe{
+	position: relative;
+
+	> iframe{
+		border: none;
+		width: 100%;
+		left: 0;
+		position: absolute;
+		height: auto;
+		background: #fff;
+	}
+}
+
+
+.modal-style1 {
+	.modal-dialog {
+		height: 86%;
+		width: 86%;
+		bottom: rem(80);
+		top: rem(80);
+		left: 0;
+		right: 0;
+		margin: auto;
+		max-width: rem(750);
+		//position: absolute;
+
+		.modal-content {
+			height: 100%;
+
+			.modal-body {
+				height: 100%;
+				position: relative;
+				overflow-y: auto;
+				padding: rem(30);
+			}
+
+			&.m-fixed-top {
+				padding-top: rem(90);
+				.modal-header {
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					height: rem(90);
+					border-bottom-color: #F18216;
+					padding: rem(24);
+
+					h4 {
+						color: #333;
+						@include font-dpr(16px);
+						//font-size: 16px;
+					}
+				}
+
+				.modal-body {
+					//padding-top: rem(90);
+				}
+			}
+
+			&.m-fixed-bottom {
+				padding-bottom: rem(120);
+				.modal-footer {
+					position: absolute;
+					left: 0;
+					right: 0;
+					height: rem(120);
+					bottom: 0;
+					border-top-width: 0;
+				}
+
+				.modal-body {
+					//padding-bottom: rem(120);
+				}
+			}
+		}
+	}
+
+	&.auto-height {
+		.modal-dialog {
+			height: auto;
+			max-height: initial;
+			margin-bottom: rem(80);
+		}
+	}
+}
+

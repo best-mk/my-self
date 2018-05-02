@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="js/flexible.js"></script>
+    <title>电子保单下载</title>
+    <link rel="stylesheet" href="css/product.css?20170714"/>
+</head>
+<body>
+
+<div class="container bg-grey" id="container">
+    <div id="download-box" class="">
+        <div class="page-body">
+            <h3 class="down-icon-tit">点击下面图标预览</h3>
+            <div class="down-icon-list" id="list">
+                <a data-action="ios">
+                    <img src="images/ios_icon.png" alt="安卓下载" />
+                    <span>苹果</span>
+                </a>
+                <a data-action="android">
+                    <img src="images/android_icon2.png" alt="安卓下载" />
+                    <span>安卓</span>
+                </a>
+                <div class="down-tips">
+                    <p>
+                        1、无法下载，<a class="blue" id="btn-download">请点击此处</a>
+                    </p>
+                    <p>
+                        2、无法下载原因：微信里无法下载文件，如果手机自带pdf阅读器，可以直接预览。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="weixin-share hide" id="weixin">
+        <div class="weixin-0">请按提示操作</div>
+        <div class="weixin-arrow"><img src="images/weixin-arrow2.png" /></div>
+        <div class="weixin-1">1. 点击</div>
+        <div id="step2" class="weixin-2">2. 在浏览器中打开</div>
+    </div>
+</div>
+
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/fastclick.js"></script>
+
+<script type="text/javascript">
+
+    var anyi = anyi || {};
+
+    anyi.browser= {
+        versions: function () {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {
+                trident: u.indexOf('Trident') > -1,
+                presto: u.indexOf('Presto') > -1,
+                webKit: u.indexOf('AppleWebKit') > -1,
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/),
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                iPhone: u.indexOf('iPhone') > -1,
+                iPad: u.indexOf('iPad') > -1,
+                webApp: u.indexOf('Safari') == -1
+            }
+        }(),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase(),
+        isWeixin: function () {
+            var ua = navigator.userAgent.toLowerCase();
+            //return true;
+            return ua.match(/MicroMessenger/i) == "micromessenger";
+        }()
+    };
+
+    $(function () {
+
+        var getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return decodeURIComponent(r[2]);
+            return null;
+        };
+
+        var url = getUrlParam("url");
+        $("#list").children("a").attr("href", url);
+
+        if(anyi.browser.isWeixin){
+            $("#weixin").removeClass("hide");
+        } else {
+            $("#weixin").addClass("hide");
+        }
+
+        /*if (anyi.browser.versions.ios === true && anyi.browser.isWeixin === true) {
+         $("#weixin").removeClass("hide");
+         } else {
+         $("#weixin").addClass("hide");
+         }*/
+
+        $("#weixin").on("click",function () {
+            $(this).toggleClass("hide");
+        });
+
+        $("#btn-download").on("click",function () {
+            $("#weixin").removeClass("hide");
+        })
+
+    });
+
+</script>
+</body>
+</html>
+
+

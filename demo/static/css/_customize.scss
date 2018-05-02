@@ -1,0 +1,21 @@
+//用于兼容不同dpr的字体
+@mixin font-dpr($font-size){
+  font-size: $font-size;/*no*/
+
+  [data-dpr="2"] & {
+    font-size: $font-size * 2;/*no*/
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3;/*no*/
+  }
+}
+
+//用于兼容768宽度的平板竖屏
+@mixin maxWidth {
+  [data-dpr="1"] & {
+    @media (min-width: 541px) and (max-width: 768px) {
+      max-width: 768px; // 768px;
+    }
+  }
+}

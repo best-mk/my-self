@@ -1,0 +1,143 @@
+@charset "utf-8";
+/**
+*   @base
+*/
+//图像块级化
+@mixin imgbox{
+  display: block;
+  border:none;
+}
+//圆角
+@mixin radius($size:0){
+  border-radius:$size;
+  -moz-border-radius:$size;
+  -webkit-border-radius:$size;
+  -o-border-radius:$size;
+}
+//渐变背景色
+@mixin gradient($bearing:'', $prve-color:'', $next-color:''){
+  background:-moz-linear-gradient($bearing, $prve-color, $next-color);
+  background:-webkit-linear-gradient($bearing, $prve-color, $next-color);
+  background:-o-linear-gradient($bearing, $prve-color, $next-color);
+  background:linear-gradient($bearing, $prve-color, $next-color);
+}
+//外阴影
+@mixin shadow($h:'', $v:'', $blur:'', $color:''){
+  -webkit-box-shadow: $h $v $blur $color;
+  -moz-box-shadow: $h $v $blur $color;
+  box-shadow: $h $v $blur $color;
+}
+//绝对居中
+@mixin translateX{-webkit-transform: translateX(-50%);transform: translateX(-50%);-moz-transform: translateX(-50%);}
+@mixin translateY{-webkit-transform: translateY(-50%);transform: translateY(-50%);-moz-transform: translateY(-50%);}
+@mixin translateXY{-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);}
+//box-sizing
+@mixin boxSizing{
+  box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+//文案居中
+@mixin textCenter{
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+//定位背景图icon
+@mixin bgBox($width:'', $height:'', $top:'', $right:'', $bottom:'', $left:'', $z-index:'', $background: ''){
+  //display: block;
+  width: $width;
+  height: $height;
+  background: url($background) no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  top:$top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $z-index;
+}
+
+/**
+*   @index
+*/
+.icbc-travel{
+  background: #159eea;
+  .banner-img{
+    img{
+      @include imgbox;
+    }
+  }
+  .form-wrap{
+    padding:.1rem .25rem .2rem;
+    .coment-box{
+      margin-bottom: .2rem;
+      .apply-input{
+        height: .44rem;
+        padding:.11rem .2rem;
+        background: #fff;
+        @include radius(.04rem);
+        @include boxSizing;
+        > input{
+          display: block;
+          width: 100%;
+          height: .2rem;
+          background: #fff;
+          font-size: .15rem;
+          line-height: .2rem;
+        }
+      }
+      &.code{
+        margin-bottom: .15rem;
+        .apply-input{
+          width: 65%;
+          float: left;
+        }
+        .verify-btn{
+          display: block;
+          width: 32%;
+          height: .44rem;
+          padding:.11rem 0;
+          float: left;
+          margin-left: 3%;
+          text-align: center;
+          font-size: .14rem;
+          color: #8c6239;
+          line-height: .2rem;
+          font-weight: bold;
+          @include gradient(top, #f9e02b, #fbbc1f);
+          @include boxSizing;
+          @include radius(.04rem);
+        }
+      }
+    }
+    .protocol-choose{
+      margin-bottom: .15rem;
+      font-size: .1rem;
+      position: relative;
+      dt{position: absolute;left: 0;top:.02rem;width: .12rem;height: .12rem;background: #159eea;border-radius: 100%;-webkit-border-radius: 100%;cursor: pointer;border:1px solid #fff;}
+      dt.has{background: #f9e02b;}
+      dt.has:before{content:'';position: absolute;bottom:-.05rem;right:.04rem;display:block;width: .04rem;height: .07rem;border-right: 1px solid #159eea;border-bottom: 1px solid #159eea;-webkit-transform: translateY(-100%) rotateZ(45deg);transform: translateY(-100%) rotateZ(45deg);-moz-transform: translateY(-100%) rotateZ(45deg);z-index: 2;}
+      dd{padding-left: .2rem;color: #fff;a{color: #f9e02b;}}
+    }
+    .submit-btn{
+      display: block;
+      width: 100%;
+      img{@include imgbox;}
+    }
+    .description{
+      color: #fff;
+      font-size: .1rem;
+      text-align: center;
+      margin-top:.1rem;
+    }
+  }
+}
